@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender DS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Waves 3D Container -->
+    <div class="background-waves">
+        <svg class="wave wave-1" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#C77DFF" />
+                    <stop offset="100%" stop-color="#7B2CBF" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad1)" d="M410,320Q370,390,300,410Q230,430,160,380Q90,330,110,240Q130,150,220,120Q310,90,380,150Q450,210,410,320Z" />
+        </svg>
+
+        <svg class="wave wave-2" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#9D4EDD" />
+                    <stop offset="100%" stop-color="#5A189A" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad2)" d="M430,350Q380,450,280,440Q180,430,130,340Q80,250,150,170Q220,90,330,110Q440,130,460,240Q480,350,430,350Z" />
+        </svg>
+
+        <svg class="wave wave-3" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#E0AAFF" />
+                    <stop offset="100%" stop-color="#9D4EDD" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad3)" d="M450,330Q400,410,310,430Q220,450,150,380Q80,310,120,210Q160,110,260,100Q360,90,420,170Q480,250,450,330Z" />
+        </svg>
+
+        <svg class="wave wave-4" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7B2CBF" />
+                    <stop offset="100%" stop-color="#3C096C" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#grad4)" d="M420,340Q350,430,260,420Q170,410,120,320Q70,230,140,140Q210,50,320,80Q430,110,460,210Q490,310,420,340Z" />
+        </svg>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <p class="hero-eyebrow">DESIGN SYSTEM &middot; LAVENDER EDITION</p>
+        <h1 class="hero-title">Component Library</h1>
+        <p class="hero-subtitle">Interactive documentation for Lavender Design System</p>
+        <div class="hero-tags">
+            <span class="hero-tag">48 tokens</span>
+            <span class="hero-tag">24 components</span>
+            <span class="hero-tag">6 states</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Documentación del Sistema -->
+        <section>
+            <h2 class="section-title">Documentación del Sistema</h2>
+            <article class="rule-card">
+                <p><strong>Contexto del Ejercicio:</strong> En una biblioteca los usuarios hacen solicitudes para préstamos de libros. La función <code>procesarSolicitud</code> recibe un array con el nombre del usuario y los títulos de los libros. Reglas: Extraer nombre, añadir 'Carné de socio' al inicio, añadir nombre al final.</p>
+            </article>
+        </section>
+
+        <!-- Interfaz Interactiva de 2 Columnas -->
+        <section class="two-columns">
+            
+            <!-- Columna Izquierda: Formulario -->
+            <article class="rule-card">
+                <h3 class="card-title">Gestión de Biblioteca</h3>
+                <div class="input-group">
+                    <label for="userName">Nombre del usuario</label>
+                    <input type="text" id="userName" class="input-control" placeholder="Ej: Maria Lopez">
+                </div>
+                <div class="input-group">
+                    <label for="bookList">Libros (separados por coma)</label>
+                    <input type="text" id="bookList" class="input-control" placeholder="Ej: El Hobbit, 1984">
+                </div>
+                <button id="processBtn" class="btn-primary">Procesar Solicitud</button>
+            </article>
+
+            <!-- Columna Derecha: Resultados -->
+            <article class="rule-card results-card">
+                <h3 class="card-title">Resultados</h3>
+                <p>El arreglo procesado se visualizará a continuación:</p>
+                <div id="resultContainer" class="tag-container">
+                    <!-- Las etiquetas dinámicas (spans) se inyectarán aquí -->
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
